@@ -26,7 +26,14 @@ module.exports ={
                 generator:{
                     filename: 'assets/[name][ext]'
                 }
-            }
+            },
+            {
+                test: /\.html$/,
+                loader: 'html',
+                query: {
+                  interpolate: 'require'
+                }
+              }
         ]
     },
     plugins: [
